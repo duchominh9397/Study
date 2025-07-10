@@ -28,21 +28,11 @@ have an account with name **exploit**( account 4th ) should have permission writ
     sudo usermod -aG b exploit
     sudo usermod -aG c exploit
 ```
-account a should have default shell is /bin/sh.
-
-account b,c and exploit should default shell is /bin/bash:
-```
-    sudo usermod -s /bin/sh a
-    sudo usermod -s /bin/bash b
-    sudo usermod -s /bin/bash c
-    sudo usermod -s /bin/bash exploit
-
-```
 account a should have home directory with name /home/data/test with 750:
 ```
     sudo mkdir /home/data
     sudo mkdir /home/data/test
-    sudo chown a:a /home/data/test
+    sudo usermod -d /home/data/test a
     sudo chmod 750 /home/data/test
 ```
 account exploit should have owner the home directory of account a:
