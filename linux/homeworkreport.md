@@ -23,8 +23,8 @@ have an account with name **exploit**( account 4th ) should have permission writ
 
 ```
     sudo adduser exploit
-    sudo chmod 703 /home/b 
-    sudo chmod 705 /home/c
+    sudo chmod 730 /home/b 
+    sudo chmod 750 /home/c
     sudo usermod -aG b exploit
     sudo usermod -aG c exploit
 ```
@@ -45,11 +45,9 @@ account a should have home directory with name /home/data/test with 750:
 ```
 account exploit should have owner the home directory of account a:
 ```
-    sudo chown exploit /home/data/test
+    sudo chown exploit:a /home/data/test
 ```
 account b and c should have permission write data into home directory account a:
 ```
-    sudo usermod -aG a b
-    sudo usermod -aG a c
-    sudo chmod 770 /home/data/test
+    sudo chmod 753 /home/data/test
 ```
