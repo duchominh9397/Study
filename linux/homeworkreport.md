@@ -1,5 +1,7 @@
 ###REPORT
+
 ###Date report: Wed 2025-07-09 21:15:52
+
 ###Excersice name: excerside1.md
 
 report details:
