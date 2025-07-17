@@ -1,10 +1,6 @@
-#
-# using the function in shell
-#
+#!/bin/bash
 
 say () {
-
-    # Color codes
     RED="\033[0;31m"
     GREEN="\033[0;32m"
     CYAN="\033[0;36m"
@@ -12,10 +8,14 @@ say () {
     NC="\033[0m"
 
     case $1 in
-        "-i") echo "${GREEN}INFO:: ${2}";;
-        "-d") echo "${YELLOW}DEBUG:: ${2}";;
-        "-w") echo "${CYAN}WARN:: ${2}";;
-        "-e") echo "${RED}ERROR:: ${2}";;
-    esac 
-
+        "-i") echo -e "${GREEN}INFO:: ${2}${NC}";;
+        "-d") echo -e "${YELLOW}DEBUG:: ${2}${NC}";;
+        "-w") echo -e "${CYAN}WARN:: ${2}${NC}";;
+        "-e") echo -e "${RED}ERROR:: ${2}${NC}";;
+    esac
 }
+
+say -i "INFO"
+say -d "DEBUG"
+say -w "WARN"
+say -e "ERROR"
