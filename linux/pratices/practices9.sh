@@ -19,20 +19,3 @@ say () {
     esac 
 
 }
-
-menuswtich () {
-
-}
-# say $1 $2
-
-
-say -i "Please selection the menu to access\n\
-1 - practices1.\n\
-2 - practices2.\n\
-3 - practices3.\n"
-
-read menuselect 
-
-echo "you selected ${menuselect}"
-
-menuswtich ${menuselect}
